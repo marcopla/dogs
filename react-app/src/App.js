@@ -1,12 +1,16 @@
 import React from 'react';
 
 const App = () => {
+  const ativo = true;
+
   return (
-    <React.Fragment>
+    <>
       <a href="https://www.origamid.com" title="Site Origamid">
         Origamid
       </a>
-    </React.Fragment>
+      <label htmlFor="nome">Nome</label>
+      <input type="text" id="nome" className={ativo ? 'ativo' : 'false'} />
+    </>
   );
 };
 
