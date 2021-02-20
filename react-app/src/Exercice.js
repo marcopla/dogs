@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Exercice = (cliente) => {
+const Exercice = () => {
   const luana = {
     cliente: 'Luana',
     idade: 27,
@@ -22,55 +22,34 @@ const Exercice = (cliente) => {
     ],
     ativa: false,
   };
-  function somaCompras(cliente) {
-    let totalCompra = 0;
-    cliente.compras.forEach((compra) => {
-      totalCompra += +compra.preco.replace('R$ ', '');
-    });
-    return totalCompra;
-  }
 
-  function verificaMais10k(cliente) {
-    if (somaCompras(cliente) >= 1000) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  const cliente = luana;
+
+  // const totalCompra = (cliente) => {
+  //   let totalCompra = 0;
+  //   cliente.compras.forEach((compra) => {
+  //     totalCompra += +compra.preco.replace('R$ ', '');
+  //   });
+  //   return totalCompra;
+  // };
+  const totalCompra = cliente.compras
+    .map((compra) => Number(compra.preco.replace('R$ ', '')))
+    .reduce((acc, item) => acc + item);
 
   return (
     <>
-      <p>
-        Nome: <span>{luana.cliente}</span>
-      </p>
-      <p>
-        Idade: <span>{luana.idade}</span>
-      </p>
+      <p>Nome: {cliente.cliente}</p>
+      <p>Idade: {cliente.idade}</p>
       <p>
         Situação:{' '}
-        <span style={luana.ativa ? { color: 'green' } : { color: 'red' }}>
-          {luana.ativa ? 'Ativa' : 'Desativada'}
+        <span style={cliente.ativa ? { color: 'green' } : { color: 'red' }}>
+          {cliente.ativa ? 'Ativa' : 'Desativada'}
         </span>
       </p>
       <p>
-        Total Gasto: <span>{somaCompras(luana)}</span>
+        Total Gasto: <span>{totalCompra}</span>
       </p>
-      <p>
-        Nome: <span>{mario.cliente}</span>
-      </p>
-      <p>
-        Idade: <span>{mario.idade}</span>
-      </p>
-      <p>
-        Situação:{' '}
-        <span style={mario.ativa ? { color: 'green' } : { color: 'red' }}>
-          {mario.ativa ? 'Ativa' : 'Desativada'}
-        </span>
-      </p>
-      <p>
-        Total Gasto: <span>{somaCompras(mario)}</span>
-      </p>
-      <p>{verificaMais10k(mario) ? 'Gasto maior que 10k' : ''}</p>
+      {totalCompra >= 10000 && <p>Gasto maior que 10k</p>}
     </>
   );
 };
