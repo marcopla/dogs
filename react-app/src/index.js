@@ -6,8 +6,6 @@ import JSXArrays from './jsxarrays.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <Exercice />
     <JSXArrays />
   </React.StrictMode>,
   document.getElementById('root'),
