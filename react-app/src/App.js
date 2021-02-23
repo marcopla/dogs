@@ -1,15 +1,12 @@
 import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
 const App = () => {
-  const ativo = true;
-
   return (
     <>
-      <a href="https://www.origamid.com" title="Site Origamid">
-        Origamid
-      </a>
-      <label htmlFor="nome">Nome</label>
-      <input type="text" id="nome" className={ativo ? 'ativo' : 'false'} />
+      <Header />
+      <Footer />
     </>
   );
 };

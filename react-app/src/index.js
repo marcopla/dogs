@@ -7,7 +7,7 @@ import Eventos from './Eventos';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Eventos />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
