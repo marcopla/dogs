@@ -6,10 +6,7 @@ import Form from './Form/Form';
 const App = () => {
   return (
     <>
-      <Header />
       <Form />
-      <Form />
-      <Footer />
     </>
   );
 };
