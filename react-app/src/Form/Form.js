@@ -4,17 +4,10 @@ import Input from './Input';
 const Form = () => {
   return (
     <form>
-      <p>
-        <label htmlFor="nome">Nome</label>
-        <Input />
-      </p>
-      <p>
-        <label htmlFor="mail">Email</label>
-        <Input />
-      </p>
+      <Input label="Email" id="email" required />
+      <Input label="Password" id="password" type="Password" />
       <Button />
     </form>
   );
 };
-
 export default Form;
