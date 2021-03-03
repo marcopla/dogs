@@ -6,7 +6,9 @@ const Desafio = () => {
     { nome: 'Smartphone', propriedades: ['2gb ram', '128gb'] },
   ];
 
-  return <section></section>;
+  const palavras = ['facebook', 'twitter'];
+
+  return <section>{produtos.nome}</section>;
 };
 
 export default Desafio;
