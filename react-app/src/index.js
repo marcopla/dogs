@@ -4,10 +4,11 @@ import App from './App';
 import Exercice from './Exercice';
 import JSXArrays from './jsxarrays';
 import Eventos from './Eventos';
+import Desafio from './Desafio/Desafio';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Desafio />
   </React.StrictMode>,
   document.getElementById('root'),
 );
