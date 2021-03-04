@@ -5,10 +5,12 @@ import Exercice from './Exercice';
 import JSXArrays from './jsxarrays';
 import Eventos from './Eventos';
 import Desafio from './Desafio/Desafio';
+import CloneExercice from './CloneExercice';
+import CloneJSXArrays from './CloneJSXArrays';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Desafio />
+    <CloneJSXArrays />
   </React.StrictMode>,
   document.getElementById('root'),
 );

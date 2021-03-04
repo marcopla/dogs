@@ -8,7 +8,7 @@ const Desafio = () => {
 
   const palavras = ['facebook', 'twitter'];
 
-  return <section>{produtos.nome}</section>;
+  return <section>{palavras}</section>;
 };
 
 export default Desafio;
