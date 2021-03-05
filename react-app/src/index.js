@@ -10,7 +10,7 @@ import CloneJSXArrays from './CloneJSXArrays';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CloneJSXArrays />
+    <Desafio />
   </React.StrictMode>,
   document.getElementById('root'),
 );
