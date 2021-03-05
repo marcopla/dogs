@@ -8,7 +8,25 @@ const Desafio = () => {
 
   const palavras = ['facebook', 'twitter'];
 
-  return <section>{palavras}</section>;
+  return (
+    <section>
+      <h1 style={{ color: 'green' }}>Produtos</h1>
+      <div style={{ border: 'solid' }}>
+        <p>
+          {produtos.map(({ nome, propriedades }) => {
+            return (
+              <>
+                <p>{nome}</p>
+                {propriedades.map((propriedade, index) => (
+                  <li key={index}>{propriedade}</li>
+                ))}
+              </>
+            );
+          })}
+        </p>
+      </div>
+    </section>
+  );
 };
 
 export default Desafio;
