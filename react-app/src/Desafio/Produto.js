@@ -6,7 +6,7 @@ const Produto = ({ nome, propriedades }) => {
       <p>{nome}</p>
       <ul>
         {propriedades.map((propriedade) => (
-          <li>{propriedades}</li>
+          <li key={propriedade}>{propriedade}</li>
         ))}
       </ul>
     </div>
