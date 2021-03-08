@@ -1,17 +1,18 @@
 import React from 'react';
 
 const App = () => {
-  let ativo = true;
+  const ativoHook = React.useState(false);
+  const ativoValor = ativoHook[0];
+  const atualizaValor = ativoHook[1];
 
   function handleClick() {
-    ativo = !ativo;
-    console.log(ativo);
+    atualizaValor(!ativoValor);
+    // ativo = !ativo;
+    // console.log(ativo);
   }
   return (
     <>
-      <button disabled={!ativo} onClick={handleClick}>
-        {ativo ? 'Ativo' : 'Inativo'}
-      </button>
+      <button onClick={handleClick}>{ativoValor ? 'Ativo' : 'Inativo'}</button>
     </>
   );
 };
