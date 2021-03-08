@@ -1,14 +1,17 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Form from './Form/Form';
-import Desafio from './Desafio/Desafio';
 
 const App = () => {
+  let ativo = true;
+
+  function handleClick() {
+    ativo = !ativo;
+    console.log(ativo);
+  }
   return (
     <>
-      <Desafio />
-      <Form />
+      <button disabled={!ativo} onClick={handleClick}>
+        {ativo ? 'Ativo' : 'Inativo'}
+      </button>
     </>
   );
 };
