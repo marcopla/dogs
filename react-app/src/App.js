@@ -5,7 +5,10 @@ import Modal from './Modal';
 const App = () => {
   const [ativo, setAtivo] = React.useState(false);
   const [dados, setDados] = React.useState({ nome: 'Marco', idade: '37' });
-  const [modal, setModal] = React.useState(false);
+  const [modal, setModal] = React.useState(() => {
+    const ativo = window.localStorage.getItem('ativo');
+    return ativo;
+  });
   const [items, setItems] = React.useState('teste');
 
   function handleClick() {
