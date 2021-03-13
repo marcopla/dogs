@@ -5,10 +5,8 @@ const App = () => {
   const [items, setItems] = React.useState(['Item 1']);
 
   function handleClick() {
-    setContar((contar) => {
-      setItems((items) => [...items, 'Item' + (contar + 1)]);
-      return contar + 1;
-    });
+    setContar((contar) => contar + 1);
+    setItems((items) => [...items, 'Item' + (contar + 1)]);
   }
   return (
     <div>
