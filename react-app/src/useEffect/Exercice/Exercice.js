@@ -3,11 +3,11 @@ import React from 'react';
 const Exercice = () => {
   function handleClick(url) {
     const produto = fetch(url).then((response) => response.json());
-    return produto;
+    console.log(produto);
   }
   return (
     <div>
-      <p>Preferência: {Produto não selecionado'}</p>
+      <p>Preferência: Produto não selecionado</p>
       <button
         onClick={handleClick(
           'https://ranekapi.origamid.dev/json/api/produto/notebook',
@@ -16,6 +16,7 @@ const Exercice = () => {
         notebook
       </button>
       <button>smartphone</button>
+      <button>tablet</button>
     </div>
   );
 };
