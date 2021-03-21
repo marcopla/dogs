@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Exercice = () => {
-  function handleClick(url) {
-    const produto = fetch(url).then((response) => response.json());
+  async function handleClick(url) {
+    const produto = await fetch(url).then((response) => response.json());
     console.log(produto);
   }
   return (
@@ -15,8 +15,20 @@ const Exercice = () => {
       >
         notebook
       </button>
-      <button>smartphone</button>
-      <button>tablet</button>
+      <button
+        onClick={handleClick(
+          'https://ranekapi.origamid.dev/json/api/produto/smartphone',
+        )}
+      >
+        smartphone
+      </button>
+      <button
+        onClick={handleClick(
+          'https://ranekapi.origamid.dev/json/api/produto/tablet',
+        )}
+      >
+        tablet
+      </button>
     </div>
   );
 };
