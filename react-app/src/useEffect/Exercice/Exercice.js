@@ -1,19 +1,16 @@
 import React from 'react';
 
 const Exercice = () => {
+  const [dados, setDados] = React.useState(null);
+
   async function handleClick(url) {
     const produto = await fetch(url).then((response) => response.json());
     console.log(produto);
-    return (
-      <>
-        <h1>produto.name</h1>
-        <p>{produto.preco}</p>
-      </>
-    );
   }
   return (
     <div>
       <button
+        style={{ margin: '.5rem' }}
         onClick={handleClick(
           'https://ranekapi.origamid.dev/json/api/produto/notebook',
         )}
@@ -34,7 +31,7 @@ const Exercice = () => {
       >
         tablet
       </button>
-      <p>Preferência: {produto.nome}</p>
+      <p>Preferência: </p>
     </div>
   );
 };
