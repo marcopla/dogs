@@ -1,4 +1,5 @@
 import React from 'react';
+import Produto from './Produto.js';
 
 const Exercice = () => {
   const [dados, setDados] = React.useState(null);
@@ -18,6 +19,7 @@ const Exercice = () => {
         notebook
       </button>
       <button
+        style={{ margin: '.5rem' }}
         onClick={handleClick(
           'https://ranekapi.origamid.dev/json/api/produto/smartphone',
         )}
@@ -25,12 +27,15 @@ const Exercice = () => {
         smartphone
       </button>
       <button
+        style={{ margin: '.5rem' }}
         onClick={handleClick(
           'https://ranekapi.origamid.dev/json/api/produto/tablet',
         )}
       >
         tablet
       </button>
+      <button></button>
+      {dados && <Produto dados={dados} />}
       <p>Preferência: </p>
     </div>
   );
