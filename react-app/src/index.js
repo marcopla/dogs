@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Exercice from './useEffect/Exercice/Exercice';
+import App from './useEffect/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Exercice />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
