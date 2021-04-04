@@ -11,8 +11,11 @@ const App = () => {
   const video = React.useRef();
   console.log(video);
   React.useEffect(() => console.log(video.current));
-  return;
-  <div ref={video}>Teste</div>;
+  return (<div>
+    <ul>
+      {comentarios.map((comentario) => 
+    ( <li key={comentario}>{comentario}</li> )}
+    </ul></div>);
 };
 
 export default App;
