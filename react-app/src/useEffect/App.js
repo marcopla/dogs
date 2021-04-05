@@ -18,6 +18,11 @@ const App = () => {
       <button style={{ margin: '.5rem' }} onClick={() => setAtivo(!ativo)}>
         Ativar
       </button>
+      <input
+        type="text"
+        value={input}
+        onChange={({ target }) => setAtivo(target.value)}
+      />
     </div>
   );
 };
