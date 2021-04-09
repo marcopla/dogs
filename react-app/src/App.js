@@ -3,11 +3,13 @@ const App = () => {
   const [contar, setContar] = React.useState(0);
   const valor = React.useMemo(() => {
     const localStorageItem = window.localStorage.getItem('produto');
-  });
-  return localStorageItem;}, []);
+    console.log('Ocorreu nemo');
+    return localStorageItem;
+  }, []);
+
   return (
     <div>
-      <button onClick= {() => setContar(contar + 1)}>{valor}</button>
+      <button onClick={() => setContar(contar + 1)}>{contar}</button>
     </div>
   );
 };
