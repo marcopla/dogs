@@ -5,7 +5,7 @@ import Exercice from './useState/Exercice/Exercice';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Exercice />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
