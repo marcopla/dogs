@@ -19,7 +19,14 @@ const useCallback = () => {
   const handleClick = React.useCallback(() => {
     setContar((contar) => contar + 1);
   }, []);
-  return <button onClick={handleClick}>{contar}</button>;
+  return (
+    <div>
+      {' '}
+      <p> onClick={func1}>Produto 1</p>
+      <p> onClick={func2}>Produto2</p>
+      <button onClick={handleClick}>{contar}</button>{' '}
+    </div>
+  );
 };
 
 export default useCallback;
