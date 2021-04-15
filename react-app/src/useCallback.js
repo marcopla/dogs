@@ -16,6 +16,11 @@ const useCallback = () => {
 
   set1.add(func1);
   set2.add(func2);
+
+  console.log('Set1: ', set1);
+
+  console.log('Set2: ', set2);
+
   const handleClick = React.useCallback(() => {
     setContar((contar) => contar + 1);
   }, []);
