@@ -5,7 +5,7 @@ import UserContext from './UserContext';
 
 const AppUse = () => {
   return (
-    <UserContext.Provider>
+    <UserContext.Provider value={{ nome: 'André' }}>
       <Produto />
     </UserContext.Provider>
   );
