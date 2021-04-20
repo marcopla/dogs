@@ -1,8 +1,13 @@
 import React from 'react';
 
-GlobalContext = React.createContext();
-const GlobalContext = () => {
-  return <GlobalContext.Provider></GlobalContext.Provider>;
-};
+export const GlobalContext = React.createContext();
 
-export default GlobalContext;
+export const GlobalStorage = ({ children }) => {
+  const [contar, setContar] = React.useState(0);
+
+  return (
+    <GlobalContext.Provider value={{ contar, setContar }}>
+      {children}
+    </GlobalContext.Provider>
+  );
+};
