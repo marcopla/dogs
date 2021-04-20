@@ -1,9 +1,9 @@
 import React from 'react';
-import UserContext from './UserContext';
+import { GlobalContext } from './GlobalContext';
 
 const Produto = () => {
-  const dados = React.useContext(UserContext);
-  return <div>{dados.nome}</div>;
+  const global = React.useContext(GlobalContext);
+  return <div>Produto: {global}</div>;
 };
 
 export default Produto;
