@@ -12,3 +12,5 @@ const useLocalStorage = (key, inicial) => {
 
   return [state, setState];
 };
+
+export default useLocalStorage;
