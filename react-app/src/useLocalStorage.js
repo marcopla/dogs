@@ -3,8 +3,9 @@ import React from 'react';
 const useLocalStorage = (key, inicial) => {
   const [data, setData] = React.useState(null);
   const [error, setError] = React.useState(null);
+  const [users, setUsers] = React.useState(null);
   const [loading, setLoading] = React.useState(null);
-  const request = REact.useCallback(async (url, options) => {
+  const request = React.useCallback(async (url, options) => {
     let reponse;
     let json;
     try {
