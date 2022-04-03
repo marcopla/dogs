@@ -5,5 +5,6 @@ import ReactDOM from 'react-dom';
 // import Exercice from './useState/Exercice/Exercice';
 // import useCallback from './useCallback';
 import NewComponent from './newComponent';
+import Ativo from './Ativo';
 
-ReactDOM.render(<NewComponent />, document.getElementById('root'));
+ReactDOM.render(<Ativo />, document.getElementById('root'));
