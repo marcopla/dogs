@@ -25,7 +25,28 @@ const mario = {
 
 const Exercicio = () => {
   const dados = luana;
-  return <div></div>;
+  const precos = dados.compras.map((compra) =>
+    Number(compra.preco.replace('R$ ', '')),
+  );
+
+  const totalGasto = precos.reduce((acc, item) => acc + item);
+
+  const gastouDemais = totalGasto > 10000 ? 'Você gastou demais!' : '';
+
+  return (
+    <div>
+      <p>Nome: {dados.cliente}</p>
+      <p>Idade: {dados.idade}</p>
+      <p>
+        Situação:{' '}
+        <span style={{ color: dados.ativa ? 'green' : 'red' }}>
+          {dados.ativa ? 'Ativa' : 'False'}
+        </span>
+      </p>
+      <p>Total gasto: R${totalGasto}</p>
+      <p>{gastouDemais}</p>
+    </div>
+  );
 };
 
 export default Exercicio;
