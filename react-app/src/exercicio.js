@@ -23,9 +23,9 @@ const mario = {
   ativa: false,
 };
 
-const exercicio = () => {
+const Exercicio = () => {
   const dados = luana;
   return <div></div>;
 };
 
-export default exercicio;
+export default Exercicio;
