@@ -24,14 +24,15 @@ const mario = {
 };
 
 const Exercicio = () => {
-  const dados = luana;
+  const dados = mario;
+
   const precos = dados.compras.map((compra) =>
     Number(compra.preco.replace('R$ ', '')),
   );
 
   const totalGasto = precos.reduce((acc, item) => acc + item);
 
-  const gastouDemais = totalGasto > 10000 ? 'Você gastou demais!' : '';
+  const gastouDemais = totalGasto > 10000 && 'Você gastou demais!';
 
   return (
     <div>
@@ -43,8 +44,8 @@ const Exercicio = () => {
           {dados.ativa ? 'Ativa' : 'False'}
         </span>
       </p>
-      <p>Total gasto: R${totalGasto}</p>
-      <p>{gastouDemais}</p>
+      <p>Total gasto: R$ {totalGasto}</p>
+      {totalGasto > 10000 && <p>Você gastou demais!</p>}
     </div>
   );
 };
