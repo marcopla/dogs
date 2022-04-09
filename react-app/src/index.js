@@ -7,5 +7,6 @@ import ReactDOM from 'react-dom';
 import NewComponent from './newComponent';
 import Exercicio from './Exercicio';
 import Ativo from './Ativo';
+import Array2 from './Array';
 
-ReactDOM.render(<Exercicio />, document.getElementById('root'));
+ReactDOM.render(<Array2 />, document.getElementById('root'));
