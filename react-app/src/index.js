@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 // import App from './useState/App';
 // import Exercice from './useState/Exercice/Exercice';
 // import useCallback from './useCallback';
-import NewComponent from './newComponent';
-import Exercicio from './Exercicio';
-import Ativo from './Ativo';
-import Array2 from './Array';
+import Eventos from '../../../react-para-iniciantes/my-app/src/Eventos';
 
-ReactDOM.render(<Array2 />, document.getElementById('root'));
+ReactDOM.render(<Eventos />, document.getElementById('root'));
