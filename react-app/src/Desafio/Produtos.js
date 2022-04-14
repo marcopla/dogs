@@ -11,6 +11,15 @@ const Produtos = () => {
     <>
       <Header />
       <Titulo titulo="Produtos" />
+      <div>
+        {produtos.map((produto) => {
+          <>
+          <p>produto.nome</p>
+          <ul>
+            <li>produto.propriedades.forEach((propriedade) => propriedade )</li>
+          </ul>
+        })</>}
+      </div>
     </>
   );
 };
