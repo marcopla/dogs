@@ -6,8 +6,16 @@ const UseState = () => {
 
   function handleClick() {
     setAtivo(!ativo);
+    setDados({ ...dados, faculdade: 'Possui Faculdade' });
   }
-  return <button onClick={handleClick}>{ativo ? 'Ativo' : 'Inativo'}</button>;
+  return (
+    <>
+      {dados.nome}
+      {dados.idade}
+      {dados.faculdade}
+      <button onClick={handleClick}>{ativo ? 'Ativo' : 'Inativo'}</button>;
+    </>
+  );
 };
 
 export default UseState;
