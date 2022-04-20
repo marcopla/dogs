@@ -4,4 +4,9 @@ import ReactDOM from 'react-dom';
 import Home from './Desafio/Home';
 import UseState from './UseState';
 
-ReactDOM.render(<UseState />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <UseState />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
