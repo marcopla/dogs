@@ -27,7 +27,7 @@ const UseState = () => {
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
-        <button onClick={handleClick}>{contar}</button>
+        <button onClick={handleItem}>{contar}</button>
       </div>
     </>
   );
