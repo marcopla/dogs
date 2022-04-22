@@ -5,10 +5,11 @@ const UseState = () => {
   const [dados, setDados] = React.useState({ nome: 'Marco', idade: 20 });
 
   const [contar, setContar] = React.useState(1);
-  const [items, setItems] = React.useState(['Item 1']);
+  let [items, setItems] = React.useState(['Item 1']);
 
   function handleItem() {
     setContar((contar) => {
+      items = 'a';
       return contar + 1;
     });
   }
