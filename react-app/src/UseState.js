@@ -7,6 +7,8 @@ const UseState = () => {
   const [contar, setContar] = React.useState(1);
   let [items, setItems] = React.useState(['Item 1']);
 
+  const active = window.localStorage.getItem('ativo');
+
   function handleItem() {
     setContar((contar) => {
       items = 'a';
