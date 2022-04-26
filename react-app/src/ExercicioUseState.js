@@ -10,9 +10,23 @@ const ExercicioUseState = () => {
       .then((response) => response.json())
       .then((json) => console.log(json.nome));
   }
+
+  function getSmartPhone() {
+    fetch('https://ranekapi.origamid.dev/json/api/produto/smartphone')
+      .then((response) => response.json())
+      .then((json) => console.log(json.nome));
+  }
+
+  function getNotebook() {
+    fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
+      .then((response) => response.json())
+      .then((json) => console.log(json.nome));
+  }
   return (
     <div>
-      <button onClick={getTablet}></button>
+      <button onClick={getTablet}>Tablet</button>
+      <button onClick={getSmartPhone}>SmartPhone</button>
+      <button onClick={getNotebook}>getNotebook</button>
     </div>
   );
 };
