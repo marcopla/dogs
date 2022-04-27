@@ -27,6 +27,7 @@ const ExercicioUseState = () => {
       <button onClick={getTablet}>Tablet</button>
       <button onClick={getSmartPhone}>SmartPhone</button>
       <button onClick={getNotebook}>getNotebook</button>
+      <Produto />
     </div>
   );
 };
