@@ -28,6 +28,7 @@ const ExercicioUseState = () => {
   return (
     <div>
       {produto.nome}
+      <Produto />
       <button onClick={getTablet}>Tablet</button>
       <button onClick={getSmartPhone}>SmartPhone</button>
       <button onClick={getNotebook}>getNotebook</button>
