@@ -1,7 +1,15 @@
 import React from 'react';
 
 const Produto = ({ nome }) => {
-  return <div>{nome}</div>;
+  const [dados, setDados] = React.useState(null);
+
+  function handleClick() {}
+
+  return (
+    <div>
+      <button onClick={handleClick}>Notebook</button>
+    </div>
+  );
 };
 
 export default Produto;
