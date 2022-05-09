@@ -7,6 +7,9 @@ const Produto = ({ nome }) => {
     const response = await fetch(
       `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText} `,
     );
+
+    const json = await response.json();
+    setDados(json);
   }
 
   return (
