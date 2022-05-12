@@ -2,6 +2,7 @@ import React from 'react';
 import Produto from './Produto';
 const Produto = () => {
   const [dados, setDados] = React.useState(null);
+  const [carregando, setCarregando] = React.useState(null);
 
   async function handleClick(event) {
     const response = await fetch(
