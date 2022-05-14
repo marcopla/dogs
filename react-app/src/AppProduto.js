@@ -12,6 +12,7 @@ const Produto = () => {
 
     const json = await response.json();
     setDados(json);
+    setCarregando(false);
   }
 
   return (
@@ -25,6 +26,7 @@ const Produto = () => {
       <button style={{ margin: '0.5rem' }} onClick={handleClick}>
         Tablet
       </button>
+      {carregando && <p>Carregando... </p>}
       {dados && <Produto dados={dados} />}
     </div>
   );
