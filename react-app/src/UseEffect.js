@@ -9,8 +9,17 @@ const UseEffect = () => {
     fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
       .then((response) => response.json())
       .then((json) => setDados(json));
-  });
-  return <button onClick={() => setContar(contar + 1)}>{contar}</button>;
+  }, []);
+  return (
+    <>
+      {dados && (
+        <div>
+          <h1>teste</h1>
+        </div>
+      )}
+      <button onClick={() => setContar(contar + 1)}>{contar}</button>;
+    </>
+  );
 };
 
 export default UseEffect;
