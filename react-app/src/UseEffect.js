@@ -1,28 +1,11 @@
 import React from 'react';
 
 const UseEffect = () => {
-  const [contar, setContar] = React.useState(0);
-  const [dados, setDados] = React.useState(null);
-  const [modal, setModal] = React.useState(false);
-
-  React.useEffect(() => console.log('Ocorre ao renderizar'), []);
-  React.useEffect(() => (document.title = 'Total' + contar), [contar]);
-  React.useEffect(() => setModal(0), [modal]);
-  React.useEffect(() => {
-    fetch('https://ranekapi.origamid.dev/json/api/produto/notebook')
-      .then((response) => response.json())
-      .then((json) => setDados(json));
-  }, []);
+  const [ativo, setAtivo] = React.useState(false);
 
   return (
     <div>
-      {dados && (
-        <div>
-          <h1>{dados.nome}</h1>
-          <p>R$ {dados.preco * contar}</p>
-        </div>
-      )}
-      <button onClick={() => setContar(contar + 1)}>{contar}</button>;
+      <button onClick={() => setAtivo(!ativo)}>Ativar</button>
     </div>
   );
 };
