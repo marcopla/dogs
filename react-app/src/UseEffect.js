@@ -2,6 +2,7 @@ import React from 'react';
 
 const UseEffect = () => {
   const [ativo, setAtivo] = React.useState(false);
+  const video = React.useRef();
 
   return (
     <div>
