@@ -2,7 +2,8 @@ import React from 'react';
 
 const useRef = () => {
   const video = React.useRef();
-  const [comentarios, setComentarios] = React.useState(['']);
+  const [comentarios, setComentarios] = React.useState(['teste', 'Teste 2']);
+  const [input, setInput] = React.useState('');
 
   React.useEffect(() => {
     console.log(video.current);
