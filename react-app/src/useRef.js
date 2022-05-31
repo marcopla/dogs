@@ -2,7 +2,8 @@ import React from 'react';
 
 const useRef = () => {
   const video = React.useRef();
-  const [comentarios, setComentarios] = React.useState(['']);
+  const [comentarios, setComentarios] = React.useState(['teste', 'Teste 2']);
+  const [input, setInput] = React.useState('teste');
 
   React.useEffect(() => {
     console.log(video.current);
@@ -14,6 +15,7 @@ const useRef = () => {
           <li key={comentario}>{comentario}</li>
         ))}
       </ul>
+      <input type="text" value={input} />
     </div>
   );
 };
