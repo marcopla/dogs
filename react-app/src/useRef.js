@@ -15,7 +15,11 @@ const useRef = () => {
           <li key={comentario}>{comentario}</li>
         ))}
       </ul>
-      <input type="text" value={input} />
+      <input
+        type="text"
+        value={input}
+        onChange={({ target }) => setInput(target.value)}
+      />
     </div>
   );
 };
