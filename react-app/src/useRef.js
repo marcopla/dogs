@@ -8,6 +8,10 @@ const useRef = () => {
   React.useEffect(() => {
     console.log(video.current);
   }, []);
+
+  function handleClick() {
+    setComentarios([...comentarios, input]);
+  }
   return (
     <div>
       <ul>
@@ -20,6 +24,7 @@ const useRef = () => {
         value={input}
         onChange={({ target }) => setInput(target.value)}
       />
+      <button onClick={handleClick}>Enviar</button>
     </div>
   );
 };
