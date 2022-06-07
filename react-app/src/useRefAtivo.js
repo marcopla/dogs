@@ -5,10 +5,6 @@ const App = () => {
     return ativoLocal;
   });
 
-  function handleClick() {
-    setAtivo((anterior) => !anterior);
-  }
-
   return (
     <button onClick={handleClick}>
       {ativo ? 'Está Ativo' : 'Está Inativo'}
