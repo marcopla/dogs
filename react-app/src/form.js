@@ -23,6 +23,13 @@ const App = () => {
         value={email}
         onChange={(event) => setEmail(event.target.value)}
       />
+      <label htmlFor="password">Email</label>
+      <input
+        type="password"
+        id="password"
+        value={password}
+        onChange={(event) => setEmail(event.target.value)}
+      />
       <button>Enviar</button>
     </form>
   );
