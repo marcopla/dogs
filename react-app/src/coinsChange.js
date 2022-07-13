@@ -12,7 +12,6 @@ function discountValue(value) {
     }
     discountValue(count);
   });
-  //return count;
 }
 
 discountValue(value);
