@@ -9,26 +9,22 @@ let indexCoinValue = 0;
 let allCoinsCombinations = new Set();
 let indexSet = 0;
 
-function verifyIfCurrentBiggerThanCents(i, currentAmount){
-  if (currentAmount >= centsValues[i]) {
-    previousAmount = currentAmount;
-    currentAmount = currentAmount - centsValues[i];
-    coinCounter[i]++;
-    verifyIfCurrentBiggerThanCents(i, currentAmount);
-
-    if ((currentAmount !== 0) && () ){
-      discountValue(i, currentAmount);
-    } else {
-      allCoinsCombinations[indexSet++] = coinCounter;
-      coinCounter = zeroArray;
-    }
-}
-}
-
 function discountValue(indexCoinValue, currentAmount) {
+  //if (currentAmount >= centsValues[indexCoinValue]) {
   for (let i = indexCoinValue; i < centsValues.length - 1; i++) {
-    verifyIfCurrentBiggerThanCents(i, currentAmount);
+    if (currentAmount >= centsValues[i]) {
+      // previousAmount = currentAmount;
+      currentAmount = currentAmount - centsValues[i];
+      coinCounter[i]++;
+      if (currentAmount !== 0) {
+        discountValue(i, currentAmount);
+      } else {
+        allCoinsCombinations[indexSet++] = coinCounter;
+        coinCounter = zeroArray;
+      }
+    }
   }
 }
 
 discountValue(indexCoinValue, currentAmount);
+console.log(allCoinsCombinations);
