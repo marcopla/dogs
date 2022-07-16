@@ -18,9 +18,10 @@ function discountValue(indexCoinValue, currentAmount) {
       coinCounter[i]++;
       if (currentAmount !== 0) {
         discountValue(i, currentAmount);
-      } else {
-        allCoinsCombinations[indexSet++] = coinCounter;
+      } else if (currentAmount === 0) {
+        allCoinsCombinations.add(coinCounter);
         coinCounter = zeroArray;
+      } else {
       }
     }
   }
